@@ -48,7 +48,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.baiyazi'
-                artifactId = 'FileDownloader'
+                artifactId = 'Downloader'
                 version = '1.0.0'
             }
         }
