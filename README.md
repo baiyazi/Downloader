@@ -13,13 +13,15 @@ allprojects {
 	}
 }
 ```
+
 和：
 
 ```clike
 dependencies {
-	implementation 'com.github.baiyazi:FileDownloader:v1.0.0'
+	implementation 'com.github.baiyazi:Downloader:v1.0.0'
 }
 ```
+
 然后写对应的`xml`和`Java`代码逻辑：
 
 ```java
