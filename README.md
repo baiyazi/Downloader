@@ -49,12 +49,14 @@ public class ThreeActivity extends AppCompatActivity implements View.OnClickList
         downloadController = new DownloadController.Builder(this)
                 .url("http://vjs.zencdn.net/v/oceans.mp4")
                 .suffix(FileSuffix.MP4)
+                .name("oceans")
                 .cacheDirName("MP4")
                 .build();
 
         downloadController2 = new DownloadController.Builder(this)
                 .url("https://nodejs.org/download/release/v12.14.0/node-v12.14.0-win-x64.zip")
                 .suffix(FileSuffix.ZIP)
+                .name("node-v12.14.0-win-x64")
                 .cacheDirName("MP4")
                 .build();
 
