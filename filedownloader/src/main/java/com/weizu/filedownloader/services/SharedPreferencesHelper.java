@@ -1,10 +1,10 @@
-package com.weizu.mylibrary2.services;
+package com.weizu.filedownloader.services;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.weizu.mylibrary2.utils.EncoderUtils;
+import com.weizu.filedownloader.utils.EncoderUtils;
 
 import java.util.HashMap;
 import java.util.HashSet;

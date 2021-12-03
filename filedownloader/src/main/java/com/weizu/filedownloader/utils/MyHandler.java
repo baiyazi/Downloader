@@ -1,4 +1,4 @@
-package com.weizu.mylibrary2.utils;
+package com.weizu.filedownloader.utils;
 
 import android.app.Activity;
 import android.os.Handler;

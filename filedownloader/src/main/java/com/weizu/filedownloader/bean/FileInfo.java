@@ -1,11 +1,10 @@
-package com.weizu.mylibrary2.bean;
+package com.weizu.filedownloader.bean;
 
 import android.content.Context;
 
-import com.weizu.mylibrary2.enums.FileSuffix;
-import com.weizu.mylibrary2.utils.EncoderUtils;
-import com.weizu.mylibrary2.utils.FileUtils;
-import com.weizu.mylibrary2.services.SharedPreferencesHelper;
+import com.weizu.filedownloader.enums.FileSuffix;
+import com.weizu.filedownloader.utils.EncoderUtils;
+import com.weizu.filedownloader.utils.FileUtils;
 
 import java.io.File;
 

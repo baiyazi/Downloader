@@ -1,10 +1,8 @@
-package com.weizu.mylibrary2.bean;
+package com.weizu.filedownloader.bean;
 
-import com.weizu.mylibrary2.enums.DownloadState;
-import com.weizu.mylibrary2.services.AssignDownloadTask;
-import com.weizu.mylibrary2.services.SharedPreferencesHelper;
-import com.weizu.mylibrary2.utils.EncoderUtils;
-import com.weizu.mylibrary2.utils.FileUtils;
+import com.weizu.filedownloader.enums.DownloadState;
+import com.weizu.filedownloader.services.AssignDownloadTask;
+import com.weizu.filedownloader.services.SharedPreferencesHelper;
 
 import java.io.File;
 

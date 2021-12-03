@@ -1,4 +1,4 @@
-package com.weizu.mylibrary2.enums;
+package com.weizu.filedownloader.enums;
 
 /**
  * 下载支持的文件类型后缀

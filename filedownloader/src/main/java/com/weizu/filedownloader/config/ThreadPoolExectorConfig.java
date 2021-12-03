@@ -1,4 +1,4 @@
-package com.weizu.mylibrary2.config;
+package com.weizu.filedownloader.config;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingDeque;

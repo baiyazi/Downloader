@@ -1,5 +1,5 @@
 # V1.0.0
-[v1.0.0](https://github.com/baiyazi/FileDownloader/releases/tag/v1.0.0)
+[v1.0.0](https://github.com/baiyazi/Downloader/)
 
 学习MulDownload对多线程文件下载的重构。对应博客地址：[Android文件下载——多文件多线程断点下载](https://blog.csdn.net/qq_26460841/article/details/121381466)
 

@@ -1,11 +1,11 @@
-package com.weizu.mylibrary2.services;
+package com.weizu.filedownloader.services;
 
 import android.util.Log;
 
-import com.weizu.mylibrary2.bean.FileDownloadPosition;
-import com.weizu.mylibrary2.bean.FileInfo;
-import com.weizu.mylibrary2.enums.DownloadState;
-import com.weizu.mylibrary2.listener.IDownloadListener;
+import com.weizu.filedownloader.bean.FileDownloadPosition;
+import com.weizu.filedownloader.bean.FileInfo;
+import com.weizu.filedownloader.enums.DownloadState;
+import com.weizu.filedownloader.listener.IDownloadListener;
 
 import java.io.File;
 import java.io.IOException;

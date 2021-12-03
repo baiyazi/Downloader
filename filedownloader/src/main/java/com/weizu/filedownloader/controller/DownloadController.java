@@ -1,15 +1,15 @@
-package com.weizu.mylibrary2.controller;
+package com.weizu.filedownloader.controller;
 
 import android.content.Context;
 
-import com.weizu.mylibrary2.base.BaseDownloadController;
-import com.weizu.mylibrary2.bean.FileInfo;
-import com.weizu.mylibrary2.config.ThreadPoolExectorConfig;
-import com.weizu.mylibrary2.enums.DownloadState;
-import com.weizu.mylibrary2.enums.FileSuffix;
-import com.weizu.mylibrary2.listener.IDownloadListener;
-import com.weizu.mylibrary2.services.AssignDownloadTask;
-import com.weizu.mylibrary2.services.SharedPreferencesHelper;
+import com.weizu.filedownloader.base.BaseDownloadController;
+import com.weizu.filedownloader.bean.FileInfo;
+import com.weizu.filedownloader.config.ThreadPoolExectorConfig;
+import com.weizu.filedownloader.enums.DownloadState;
+import com.weizu.filedownloader.enums.FileSuffix;
+import com.weizu.filedownloader.listener.IDownloadListener;
+import com.weizu.filedownloader.services.AssignDownloadTask;
+import com.weizu.filedownloader.services.SharedPreferencesHelper;
 
 import java.util.concurrent.Executor;
 

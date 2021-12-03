@@ -1,4 +1,4 @@
-package com.weizu.mylibrary2.services;
+package com.weizu.filedownloader.services;
 
 import java.util.HashMap;
 import java.util.Map;

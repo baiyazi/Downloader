@@ -1,4 +1,4 @@
-package com.weizu.mylibrary2.enums;
+package com.weizu.filedownloader.enums;
 
 /**
  * 文件下载状态，用来进行下载时候的重复判断：

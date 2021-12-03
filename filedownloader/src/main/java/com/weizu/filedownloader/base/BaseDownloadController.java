@@ -1,7 +1,7 @@
-package com.weizu.mylibrary2.base;
+package com.weizu.filedownloader.base;
 
-import com.weizu.mylibrary2.enums.FileSuffix;
-import com.weizu.mylibrary2.listener.IDownloadListener;
+import com.weizu.filedownloader.enums.FileSuffix;
+import com.weizu.filedownloader.listener.IDownloadListener;
 
 /**
  * 下载控制器的基类
