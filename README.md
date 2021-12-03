@@ -1,9 +1,10 @@
 # V1.0.0
-[v1.0.0](https://github.com/baiyazi/Downloader/)
+[v1.0.0](https://github.com/baiyazi/Downloader/)     文档地址：[Downloader文档](https://baiyazi.github.io/docs/Downloader/)
 
-学习MulDownload对多线程文件下载的重构。对应博客地址：[Android文件下载——多文件多线程断点下载](https://blog.csdn.net/qq_26460841/article/details/121381466)
+学习`MulDownload`对多线程文件下载的重构。对应博客地址：[Android文件下载——多文件多线程断点下载](https://blog.csdn.net/qq_26460841/article/details/121381466)
 
 ## 使用案例：
+
 首先导入依赖：
 ```clike
 allprojects {
@@ -180,4 +181,3 @@ public class ThreeActivity extends AppCompatActivity implements View.OnClickList
 
 因为访问外部存储需要动态权限申请，在测试中直接是在设备设置中手动开启的。没有在代码开启权限。
 
-文档地址：[index.html](./docs/index.html)
