@@ -5,7 +5,9 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * 将url转化为一个较短的字符串表示
- * @auth 梦否
+ * @author  梦否
+ * @version 1.0
+ * @since 1.0
  * @csdn https://blog.csdn.net/qq_26460841
  * @date 2021-11-16 10:11:31
  */

@@ -11,11 +11,16 @@ import java.lang.ref.WeakReference;
 
 /**
  * Date：2021年9月28日 10:11:52
- * Author: 梦否
+ * 单例的Handler
+ * @author  梦否
+ * @version 1.0
+ * @since 1.0
+ * <p>
  * Example：
  * MyHandler myHandler = MyHandler.getHandler(this);
  * myHandler.setActivityReference(this);
  * handler = myHandler.getHandler();
+ * </p>
  */
 public class MyHandler {
     // 锁对象

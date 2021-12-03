@@ -13,6 +13,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.Executor;
 
+/**
+ * 将一个待下载的文件分为若干个线程来处理
+ * @author  梦否
+ * @version 1.0
+ * @since 1.0
+ */
 public class AssignDownloadTask {
     private String TAG = "AssignDownloadTaskThread";
     private FileInfo mFileInfo;

@@ -2,7 +2,9 @@ package com.weizu.filedownloader.listener;
 
 /**
  * 监听接口
- * @auth 梦否
+ * @author  梦否
+ * @version 1.0
+ * @since 1.0
  * @csdn https://blog.csdn.net/qq_26460841
  * @date 2021-11-16 09:57:12
  */

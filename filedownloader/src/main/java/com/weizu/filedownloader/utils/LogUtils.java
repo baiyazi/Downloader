@@ -4,6 +4,12 @@ import android.util.Log;
 
 import java.io.IOException;
 
+/**
+ * 日志类，控制是否开启日志功能
+ * @author  梦否
+ * @version 1.0
+ * @since 1.0
+ */
 public class LogUtils {
 
     private static boolean showLog = true;

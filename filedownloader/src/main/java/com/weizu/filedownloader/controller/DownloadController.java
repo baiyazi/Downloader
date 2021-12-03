@@ -13,6 +13,40 @@ import com.weizu.filedownloader.services.SharedPreferencesHelper;
 
 import java.util.concurrent.Executor;
 
+/**
+ * 采用和后台开发的思想，外部暴露在<code>Controller</code>中，所以这里也就是采用类似的方式，比如：
+ * <p>
+ * <pre class="code">
+ * // 构建下载控制器
+ * downloadController = new DownloadController.Builder(this)
+ * .url("http://vjs.zencdn.net/v/oceans.mp4")
+ * .suffix(FileSuffix.MP4)
+ * .name("oceans")
+ * .cacheDirName("MP4")
+ * .build();
+ * // 清除暂停状态
+ * downloadController.clearPause();
+ * // 开启下载
+ * downloadController.download(new IDownloadListener() {
+ *
+ * @Override public void onSuccess(String filePath) {
+ * }
+ * @Override public void onError(String msg) {
+ * Log.e("TAG", "onError: " + msg);
+ * }
+ * @Override public void onProgress(long currentPos, long totalLength) {
+ * int val = (int) (currentPos * 1.0 / totalLength * 100);
+ * progressbar.setProgress(val);
+ * }
+ * });
+ * // 暂停下载
+ * downloadController.pauseDownload();
+ * </pre>
+ * </p>
+ * @author 梦否
+ * @version 1.0
+ * @since 1.0
+ */
 public class DownloadController extends BaseDownloadController {
     private static final String TAG = "MultiThreadBreakpointDownloader";
     private String method = "GET";                                         // 请求方法
@@ -24,9 +58,10 @@ public class DownloadController extends BaseDownloadController {
     private FileInfo fileInfo;                                             // 待下载文件信息
     private volatile DownloadState downloadState = DownloadState.BEFOREDOWNLOAD;    // 下载状态     //
 
-    private DownloadController(){}
+    private DownloadController() {
+    }
 
-    public DownloadController(Context context){
+    public DownloadController(Context context) {
         connectionTimeout = 500; // 500毫秒
         method = "GET";
         this.fileInfo = new FileInfo();
@@ -34,40 +69,40 @@ public class DownloadController extends BaseDownloadController {
         this.initExecutor();
     }
 
-    public DownloadController url(String url){
+    public DownloadController url(String url) {
         this.fileInfo.setUrl(url);
         return this;
     }
 
-    public DownloadController name(String newFileName){
+    public DownloadController name(String newFileName) {
         this.fileInfo.setNewFileName(newFileName);
         return this;
     }
 
-    public DownloadController fileSuffix(FileSuffix fileSuffix){
+    public DownloadController fileSuffix(FileSuffix fileSuffix) {
         this.fileInfo.setSuffix(fileSuffix);
         return this;
     }
 
-    public DownloadController cacheDir(String dir){
+    public DownloadController cacheDir(String dir) {
         this.cacheDir = dir;
         return this;
     }
 
-    public DownloadController totalSize(long size){
+    public DownloadController totalSize(long size) {
         this.fileInfo.setTotalSize(size);
         return this;
     }
 
-    public void setCacheDir(String cacheDir){
+    public void setCacheDir(String cacheDir) {
         this.cacheDir = cacheDir;
     }
 
-    public String getCacheDir(){
+    public String getCacheDir() {
         return cacheDir;
     }
 
-    public void initExecutor(){
+    public void initExecutor() {
         ThreadPoolExectorConfig config = new ThreadPoolExectorConfig();
         executor = config.getExecutor();
         maximumPoolSize = config.getMaximumPoolSize();
@@ -79,7 +114,7 @@ public class DownloadController extends BaseDownloadController {
         downloadState = DownloadState.PAUSE;
     }
 
-    public synchronized boolean getPaused(){
+    public synchronized boolean getPaused() {
         return isPause;
     }
 
@@ -88,7 +123,7 @@ public class DownloadController extends BaseDownloadController {
         downloadState = DownloadState.BEFOREDOWNLOAD;
     }
 
-    public DownloadController(Builder builder){
+    public DownloadController(Builder builder) {
         this.fileInfo = new FileInfo();
         this.connectionTimeout = builder.connectionTimeout;
         this.fileInfo.setContext(builder.context);
@@ -107,36 +142,36 @@ public class DownloadController extends BaseDownloadController {
         private final Context context;
         private String newFileName;
 
-        public Builder(Context context){
+        public Builder(Context context) {
             this.context = context;
         }
 
-        public Builder url(String url){
+        public Builder url(String url) {
             this.url = url;
             return this;
         }
 
-        public Builder timeout(int ms){
+        public Builder timeout(int ms) {
             this.connectionTimeout = ms;
             return this;
         }
 
-        public Builder name(String newFileName){
+        public Builder name(String newFileName) {
             this.newFileName = newFileName;
             return this;
         }
 
-        public Builder suffix(FileSuffix suffix){
+        public Builder suffix(FileSuffix suffix) {
             this.suffix = suffix;
             return this;
         }
 
-        public Builder cacheDirName(String cacheDirName){
+        public Builder cacheDirName(String cacheDirName) {
             this.cachePath = cacheDirName;
             return this;
         }
 
-        public DownloadController build(){
+        public DownloadController build() {
             return new DownloadController(this);
         }
     }
@@ -148,9 +183,9 @@ public class DownloadController extends BaseDownloadController {
     @Override
     public void download(IDownloadListener listener) {
         // 如果isPause值是暂停就不需要下载
-        if(getPaused()) return;
+        if (getPaused()) return;
         // 如果状态为下载中，就不需要在继续响应下载
-        if(downloadState == DownloadState.DOWNLOADING) return;
+        if (downloadState == DownloadState.DOWNLOADING) return;
         new Thread(new Runnable() {
             @Override
             public void run() {

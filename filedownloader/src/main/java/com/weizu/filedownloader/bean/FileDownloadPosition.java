@@ -8,7 +8,9 @@ import java.io.File;
 
 /**
  * 记录文件下载位置的类
- * @auth 梦否
+ * @author 梦否
+ * @version 1.0
+ * @since 1.0
  * @csdn https://blog.csdn.net/qq_26460841
  * @date 2021-11-16 14:52:41
  */

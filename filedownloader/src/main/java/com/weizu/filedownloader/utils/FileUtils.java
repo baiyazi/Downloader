@@ -5,6 +5,12 @@ import android.os.Environment;
 
 import java.io.File;
 
+/**
+ * 文件处理类
+ * @author  梦否
+ * @version 1.0
+ * @since 1.0
+ */
 public class FileUtils {
 
     /**
