@@ -28,7 +28,6 @@ import java.util.concurrent.Executor;
  * downloadController.clearPause();
  * // 开启下载
  * downloadController.download(new IDownloadListener() {
- *
  * @Override public void onSuccess(String filePath) {
  * }
  * @Override public void onError(String msg) {
