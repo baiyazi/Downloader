@@ -176,7 +176,9 @@ public class ThreeActivity extends AppCompatActivity implements View.OnClickList
 注意添加权限：
 
 ```xml
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/><uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/><uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
 ```
 
 因为访问外部存储需要动态权限申请，在测试中直接是在设备设置中手动开启的。没有在代码开启权限。

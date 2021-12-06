@@ -15,7 +15,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * 文件分段下载，多个线程共同下载一个文件，这里定义为这种情况下的单线程下载操作
+ * 文件分段下载，多个线程共同下载一个文件，这里定义为这种情况下的下载操作
  * @author 梦否
  * @version 1.0
  * @since 1.0

@@ -1,3 +1,4 @@
+include ':filedownloader2'
 include ':filedownloader'
 include ':app'
 rootProject.name = "Downloader"
